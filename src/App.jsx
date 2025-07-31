@@ -40,21 +40,34 @@ import logoImage from "/src/assets/images/logo-2.png";
 
 // Project Image Imports
 import branding from "/src/assets/images/portfolio/branding-tech.jpg";
-import logo from "/src/assets/images/portfolio/logo-bakery.jpg";
+import logo1 from "/src/assets/images/portfolio/logo-bakery.jpg";
 import packageImg from "/src/assets/images/portfolio/package-tea.jpg";
 import poster from "/src/assets/images/portfolio/poster-music.jpg";
 import lettering from "/src/assets/images/portfolio/letter-wedding.jpg";
 import dangler from "/src/assets/images/portfolio/dangler-sale.jpg";
-import brochure from "/src/assets/images/portfolio/brochure-travel.jpg";
+import brochure2 from "/src/assets/images/portfolio/brochure-travel.jpg";
 import branding2 from "/src/assets/images/portfolio/branding-tech-2.jpg";
-import brochure2 from "/src/assets/images/portfolio/brochure-2.jpg";
-import businessCard from "/src/assets/images/portfolio/business-card.jpg";
+import brochure3 from "/src/assets/images/portfolio/brochure-3.jpg";
+import businessCardUD from "/src/assets/images/portfolio/business-card.jpg";
 import photoshopDrawing from "/src/assets/images/portfolio/photoshop-drawing.jpg";
 import poster2 from "/src/assets/images/portfolio/poster-design.jpg";
 import shopBoard from "/src/assets/images/portfolio/shop-board.jpg";
 import vectorDrawing from "/src/assets/images/portfolio/vector-drawing.jpg";
 import poster3 from "/src/assets/images/portfolio/poster-3.jpg";
 
+//new project imports
+import brochure4 from "/src/assets/images/portfolio/brochure-4.jpg";
+import businessCard2 from "/src/assets/images/portfolio/business-card-2.jpg";
+import shopBoard2 from "/src/assets/images/portfolio/shop-board-2.jpg";
+import shopBoard3 from "/src/assets/images/portfolio/shop-board-3.jpg";
+import poster4 from "/src/assets/images/portfolio/poster-design-2.jpg";
+import poster5 from "/src/assets/images/portfolio/poster-design-3.jpg";
+import poster6 from "/src/assets/images/portfolio/poster-design-4.jpg";
+import poster7 from "/src/assets/images/portfolio/poster-design-5.jpg";
+import poster8 from "/src/assets/images/portfolio/poster-design-6.jpg";
+import productManipulation from "/src/assets/images/portfolio/product-manipulation.jpg";
+import logo2 from "/src/assets/images/portfolio/logo-design.jpg";
+import logo3 from "/src/assets/images/portfolio/logo-design-2.jpg";
 // ============================================================================
 // DATA & CONFIGURATION
 // ============================================================================
@@ -66,13 +79,13 @@ const portfolioData = [
     title: "Ice Cream Company Branding",
     category: "Branding",
     image: branding,
-    className: "lg:col-span-2",
+    className: "lg:col-span-2", // Keep as a strong opener
   },
   {
     id: 2,
-    title: "Airline Logo Concept",
+    title: "Burger Restaurant Logo Design",
     category: "Logo Design",
-    image: logo,
+    image: logo1,
     className: "",
   },
   {
@@ -87,48 +100,48 @@ const portfolioData = [
     title: "Pizza Promotion Poster",
     category: "Poster Design",
     image: poster,
-    className: "lg:row-span-2",
+    className: "lg:row-span-2", // Good for a tall poster
   },
   {
     id: 5,
-    title: "Educational Institute Two Fold Brochure ",
+    title: "Educational Institute Two Fold Brochure",
     category: "Brochure Design",
-    image: brochure,
-    className: "",
+    image: brochure2,
+    className: "", // Changed
   },
   {
     id: 6,
     title: "Flingo Custom Lettering",
     category: "Letter Style Creation",
     image: lettering,
-    className: "lg:col-span-2",
+    className: "lg:col-span-2", // Changed - Highlights lettering skill
   },
   {
     id: 7,
     title: "Christmas Sale Dangler",
     category: "Dangler Design",
     image: dangler,
-    className: "",
+    className: "", // Changed
   },
   {
     id: 8,
     title: "Brand Stationery Design",
     category: "Branding",
     image: branding2,
-    className: "",
+    className: "", // Changed
   },
   {
     id: 9,
     title: "Corporate Tri-fold Brochure",
     category: "Brochure Design",
-    image: brochure2,
+    image: brochure3,
     className: "",
   },
   {
     id: 10,
-    title: "Ice Cream Business Card",
+    title: "Professional Engineering Business Card",
     category: "Business Card Design",
-    image: businessCard,
+    image: businessCardUD,
     className: "",
   },
   {
@@ -136,21 +149,21 @@ const portfolioData = [
     title: "Digital Lemon Illustration",
     category: "Digital Illustration",
     image: photoshopDrawing,
-    className: "lg:row-span-2",
+    className: "", // Changed - Great for a tall art piece
   },
   {
     id: 12,
     title: "Hajj & Umrah Travel Poster",
     category: "Poster Design",
     image: poster2,
-    className: "lg:col-span-2",
+    className: "lg:col-span-2", // Changed - Makes the poster a wide feature
   },
   {
     id: 13,
     title: "Retail Shop Signboard",
     category: "Signage Design",
     image: shopBoard,
-    className: "",
+    className: "", // Changed
   },
   {
     id: 14,
@@ -164,10 +177,94 @@ const portfolioData = [
     title: "Arabic Food Promo Poster",
     category: "Poster Design",
     image: poster3,
+    className: "lg:col-span-2", // Changed - Another tall feature item
+  },
+  {
+    id: 16,
+    title: "Fashion Academy Trifold Brochure",
+    category: "Brochure Design",
+    image: brochure4,
+    className: "lg:col-span-2",
+  },
+  {
+    id: 17,
+    title: "Luxury Jewels Business Card",
+    category: "Business Card Design",
+    image: businessCard2,
+    className: "",
+  },
+  {
+    id: 18,
+    title: "Fresh Burger Billboard Design",
+    category: "Signage Design",
+    image: shopBoard2,
+    className: "", // Changed
+  },
+  {
+    id: 19,
+    title: "Airy Jewels Billboard Advertisement",
+    category: "Signage Design",
+    image: shopBoard3,
+    className: "lg:col-span-2", // Changed
+  },
+  {
+    id: 20,
+    title: "UAE Visa Promotional Poster",
+    category: "Poster Design",
+    image: poster4,
+    className: "",
+  },
+  {
+    id: 21,
+    title: "Bahrain Visa Travel Poster",
+    category: "Poster Design",
+    image: poster5,
+    className: "", // Changed - Creates a vertical break
+  },
+
+  {
+    id: 22,
+    title: "China Business Visa Poster",
+    category: "Poster Design",
+    image: poster6,
+    className: "",
+  },
+  {
+    id: 23,
+    title: "Airy Jewels Logo & Branding",
+    category: "Logo Design",
+    image: logo2,
+    className: "",
+  },
+  {
+    id: 24,
+    title: "Luxury Perfume Photo Manipulation",
+    category: "Photo Manipulation",
+    image: productManipulation,
+    className: "lg:col-span-2", // Keep as a hero item
+  },
+  {
+    id: 25,
+    title: "Psychology Course Awareness Poster",
+    category: "Poster Design",
+    image: poster7,
+    className: "",
+  },
+  {
+    id: 26,
+    title: "Ciaro Project Construction Logo",
+    category: "Logo Design",
+    image: logo3,
+    className: "lg:col-span-2", // Changed - Ends with a final wide feature
+  },
+  {
+    id: 27,
+    title: "Counselling Psychology Course Poster",
+    category: "Poster Design",
+    image: poster8,
     className: "",
   },
 ];
-
 
 const serviceList = [
   {
@@ -928,74 +1025,77 @@ const Portfolio = () => {
       : portfolioData.filter((p) => p.category === filter);
 
   return (
-    <motion.section
+    <section
       id="portfolio"
       className="py-24"
       style={{ backgroundColor: colors.bg }}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={staggerContainer(0.2)}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <motion.h2
-          variants={fadeInUp}
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-4"
-          style={{ color: colors.text }}
-        >
-          My Portfolio
-        </motion.h2>
-        <motion.p
-          variants={fadeInUp}
-          className="text-center mb-12 max-w-2xl mx-auto text-base sm:text-lg"
-          style={{ color: colors.muted }}
-        >
-          A showcase of my creative work and design solutions.
-        </motion.p>
+        {/* Header - Always Visible */}
+        <div className="text-center mb-16">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
+            style={{ color: colors.text }}
+          >
+            My Portfolio
+          </h2>
+          <p
+            className="text-center mb-12 max-w-2xl mx-auto text-base sm:text-lg"
+            style={{ color: colors.muted }}
+          >
+            A showcase of my creative work and design solutions.
+          </p>
 
-        <motion.div
-          variants={fadeInUp}
-          className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className="px-4 py-1.5 text-sm sm:px-6 sm:py-2 sm:text-base rounded-full font-medium transition-colors duration-300 relative"
-            >
-              {filter === category && (
-                <motion.div
-                  layoutId="filter-highlight"
-                  className="absolute inset-0 rounded-full"
-                  style={{ backgroundColor: colors.accent1 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                />
-              )}
-              <span
-                className="relative z-10"
-                style={{
-                  color: filter === category ? colors.bg : colors.muted,
-                }}
+          {/* Filter Buttons - Always Visible */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setFilter(category)}
+                className="px-4 py-1.5 text-sm sm:px-6 sm:py-2 sm:text-base rounded-full font-medium transition-colors duration-300 relative"
               >
-                {category}
-              </span>
-            </button>
-          ))}
-        </motion.div>
+                {filter === category && (
+                  <motion.div
+                    layoutId="filter-highlight"
+                    className="absolute inset-0 rounded-full"
+                    style={{ backgroundColor: colors.accent1 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+                <span
+                  className="relative z-10"
+                  style={{
+                    color: filter === category ? colors.bg : colors.muted,
+                  }}
+                >
+                  {category}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
 
-        {/* Responsive Masonry Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 auto-rows-[18rem] lg:auto-rows-[24rem] gap-4">
+        {/* Portfolio Grid */}
+        <motion.div
+          className="grid grid-cols-2 lg:grid-cols-4 auto-rows-[18rem] lg:auto-rows-[24rem] gap-4"
+          initial="hidden"
+          animate="show"
+          variants={staggerContainer(0.1)}
+        >
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
-                className={`group relative overflow-hidden rounded-2xl cursor-pointer ${project.className}`}
+                className={`group relative overflow-hidden rounded-2xl cursor-pointer ${
+                  project.className || ""
+                }`}
                 onClick={() => setSelectedProject(project)}
                 layout
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4 }}
+                variants={fadeInUp}
               >
                 <img
                   src={project.image}
@@ -1017,7 +1117,7 @@ const Portfolio = () => {
               </motion.div>
             ))}
           </AnimatePresence>
-        </div>
+        </motion.div>
 
         {/* Project Detail Modal */}
         <AnimatePresence>
@@ -1030,7 +1130,7 @@ const Portfolio = () => {
               exit={{ opacity: 0 }}
             >
               <motion.div
-                className="relative w-full max-w-3xl max-h-[90vh] rounded-2xl overflow-y-auto no-scrollbar"
+                className="relative w-full max-w-3xl max-h-[90vh] rounded-2xl overflow-y-auto"
                 style={{ backgroundColor: colors.card }}
                 onClick={(e) => e.stopPropagation()}
                 initial={{ y: 50, opacity: 0 }}
@@ -1060,7 +1160,8 @@ const Portfolio = () => {
                     className="text-base sm:text-lg leading-relaxed"
                     style={{ color: colors.muted }}
                   >
-                    {selectedProject.description}
+                    {selectedProject.description ||
+                      "A beautiful design project showcasing creative excellence and attention to detail."}
                   </p>
                 </div>
                 <button
@@ -1076,7 +1177,7 @@ const Portfolio = () => {
           )}
         </AnimatePresence>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
