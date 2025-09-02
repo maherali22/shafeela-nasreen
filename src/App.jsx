@@ -32,34 +32,40 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+import {
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiAdobeindesign,
+  SiCoreldraw,
+} from "react-icons/si";
+
 // Local Assets
 import sentSound from "/src/assets/sounds/sent-sound.mp3";
 import heroPhoto from "/src/assets/images/placeholder-professional-photo.png";
-import cv from "/src/assets/documents/Shafeela_Nasreen_CV.pdf";
-import logoImage from "/src/assets/images/logo-2.png";
+import cv from "/src/assets/documents/Shafeela_Nasreen_CV2.pdf";
+import logoImage from "/src/assets/images/logo-3.png";
 
 // Project Image Imports
-import branding from "/src/assets/images/portfolio/branding-tech.jpg";
+import branding from "/src/assets/images/portfolio/branding-tech-4.jpg";
 import logo1 from "/src/assets/images/portfolio/logo-bakery.jpg";
-import packageImg from "/src/assets/images/portfolio/package-tea.jpg";
+import packageImg from "/src/assets/images/portfolio/packaging-2.jpg";
+import packageImg2 from "/src/assets/images/portfolio/packaging-3.jpg";
 import poster from "/src/assets/images/portfolio/poster-music.jpg";
 import lettering from "/src/assets/images/portfolio/letter-wedding.jpg";
-import dangler from "/src/assets/images/portfolio/dangler-sale.jpg";
+import dangler from "/src/assets/images/portfolio/dangler-sale-2.jpg";
 import brochure2 from "/src/assets/images/portfolio/brochure-travel.jpg";
-import branding2 from "/src/assets/images/portfolio/branding-tech-2.jpg";
+import branding2 from "/src/assets/images/portfolio/branding-tech-3.jpg";
 import brochure3 from "/src/assets/images/portfolio/brochure-3.jpg";
 import businessCardUD from "/src/assets/images/portfolio/business-card.jpg";
-import photoshopDrawing from "/src/assets/images/portfolio/photoshop-drawing.jpg";
 import poster2 from "/src/assets/images/portfolio/poster-design.jpg";
-import shopBoard from "/src/assets/images/portfolio/shop-board.jpg";
 import vectorDrawing from "/src/assets/images/portfolio/vector-drawing.jpg";
 import poster3 from "/src/assets/images/portfolio/poster-3.jpg";
 
 //new project imports
-import brochure4 from "/src/assets/images/portfolio/brochure-4.jpg";
-import businessCard2 from "/src/assets/images/portfolio/business-card-2.jpg";
-import shopBoard2 from "/src/assets/images/portfolio/shop-board-2.jpg";
-import shopBoard3 from "/src/assets/images/portfolio/shop-board-3.jpg";
+
+import businessCard2 from "/src/assets/images/portfolio/business-card-3.jpg";
+import shopBoard2 from "/src/assets/images/portfolio/shop-board-5.jpg";
+import shopBoard3 from "/src/assets/images/portfolio/shop-board-4.jpg";
 import poster4 from "/src/assets/images/portfolio/poster-design-2.jpg";
 import poster5 from "/src/assets/images/portfolio/poster-design-3.jpg";
 import poster6 from "/src/assets/images/portfolio/poster-design-4.jpg";
@@ -68,6 +74,19 @@ import poster8 from "/src/assets/images/portfolio/poster-design-6.jpg";
 import productManipulation from "/src/assets/images/portfolio/product-manipulation.jpg";
 import logo2 from "/src/assets/images/portfolio/logo-design.jpg";
 import logo3 from "/src/assets/images/portfolio/logo-design-2.jpg";
+import logo4 from "/src/assets/images/portfolio/logo-design-5.jpg";
+import vectorDrawing2 from "/src/assets/images/portfolio/vector-drawing-2.jpg";
+import packageImg3 from "/src/assets/images/portfolio/packaging-4.jpg";
+import digitalArt from "/src/assets/images/portfolio/digital-drawing.jpg";
+import digitalArt2 from "/src/assets/images/portfolio/digital-drawing-2.jpg";
+import rollup from "/src/assets/images/portfolio/roll-up.jpg";
+import dangler3 from "/src/assets/images/portfolio/dangler-sale-3.jpg";
+import rollup2 from "/src/assets/images/portfolio/roll-up-2.jpg";
+import magazineCoverPage from "/src/assets/images/portfolio/cover-page.jpg";
+import lanyard from "/src/assets/images/portfolio/lanyard.jpg";
+import magazineCoverPage2 from "/src/assets/images/portfolio/cover-page-2.jpg";
+import coreldraw from "/src/assets/images/coreldraw.png"
+
 // ============================================================================
 // DATA & CONFIGURATION
 // ============================================================================
@@ -90,7 +109,7 @@ const portfolioData = [
   },
   {
     id: 3,
-    title: "Hair Oil Packaging",
+    title: "Potato chips Packaging",
     category: "Package Design",
     image: packageImg,
     className: "",
@@ -146,10 +165,10 @@ const portfolioData = [
   },
   {
     id: 11,
-    title: "Digital Lemon Illustration",
-    category: "Digital Illustration",
-    image: photoshopDrawing,
-    className: "", // Changed - Great for a tall art piece
+    title: "Skin care Packaging",
+    category: "Package Design",
+    image: packageImg2,
+    className: "",
   },
   {
     id: 12,
@@ -157,13 +176,6 @@ const portfolioData = [
     category: "Poster Design",
     image: poster2,
     className: "lg:col-span-2", // Changed - Makes the poster a wide feature
-  },
-  {
-    id: 13,
-    title: "Retail Shop Signboard",
-    category: "Signage Design",
-    image: shopBoard,
-    className: "", // Changed
   },
   {
     id: 14,
@@ -181,10 +193,10 @@ const portfolioData = [
   },
   {
     id: 16,
-    title: "Fashion Academy Trifold Brochure",
-    category: "Brochure Design",
-    image: brochure4,
-    className: "lg:col-span-2",
+    title: "SnapSizzle Spot – Hot & Cool Burger Brand Identity",
+    category: "Logo Design",
+    image: logo4,
+    className: "",
   },
   {
     id: 17,
@@ -239,7 +251,7 @@ const portfolioData = [
   {
     id: 24,
     title: "Luxury Perfume Photo Manipulation",
-    category: "Photo Manipulation",
+    category: "Product Manipulation",
     image: productManipulation,
     className: "lg:col-span-2", // Keep as a hero item
   },
@@ -248,7 +260,7 @@ const portfolioData = [
     title: "Psychology Course Awareness Poster",
     category: "Poster Design",
     image: poster7,
-    className: "",
+    className: "lg:col-span-2",
   },
   {
     id: 26,
@@ -262,6 +274,76 @@ const portfolioData = [
     title: "Counselling Psychology Course Poster",
     category: "Poster Design",
     image: poster8,
+    className: "",
+  },
+  {
+    id: 28,
+    title: "Vector Portrait Illustration",
+    category: "Vector Illustration",
+    image: vectorDrawing2,
+    className: "",
+  },
+  {
+    id: 29,
+    title: "Burger Packaging",
+    category: "Package Design",
+    image: packageImg3,
+    className: "",
+  },
+  {
+    id: 30,
+    title: "Digital Artwork",
+    category: "Digital Art",
+    image: digitalArt,
+    className: "",
+  },
+  {
+    id: 31,
+    title: "Digital Artwork 2",
+    category: "Digital Art",
+    image: digitalArt2,
+    className: "lg:col-span-2",
+  },
+  {
+    id: 32,
+    title: "Construction & Maintenance Services Roll-Up Banner",
+    category: "Roll-Up Design",
+    image: rollup,
+    className: "",
+  },
+  {
+    id: 33,
+    title: "Rouzas Promotional Dangler",
+    category: "Dangler Design",
+    image: dangler3,
+    className: "lg:col-span-2",
+  },
+  {
+    id: 34,
+    title: "Burger Offer Roll-Up Banner Design",
+    category: "Roll-Up Design",
+    image: rollup2,
+    className: "",
+  },
+  {
+    id: 35,
+    title: "Magazine Cover Page",
+    category: "Magazine Design",
+    image: magazineCoverPage,
+    className: "",
+  },
+  {
+    id: 36,
+    title: "Lanyard of Construction & Maintenance Services",
+    category: "Lanyard Design",
+    image: lanyard,
+    className: "lg:col-span-2",
+  },
+  {
+    id: 37,
+    title: "Magazine Cover Page 2",
+    category: "Magazine Design",
+    image: magazineCoverPage2,
     className: "",
   },
 ];
@@ -730,10 +812,19 @@ const Hero = () => {
 const About = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
   const softwareSkills = [
-    { name: "Adobe Photoshop", level: 90 },
-    { name: "CorelDRAW", level: 90 },
-    { name: "Adobe Illustrator", level: 75 },
-    { name: "Adobe InDesign", level: 70 },
+    {
+      name: "Adobe Photoshop",
+      logo: <SiAdobephotoshop size={60} color="#31A8FF" />,
+    },
+    { name: "CorelDRAW", logo: <SiCoreldraw size={60} color="#00A550" /> },
+    {
+      name: "Adobe Illustrator",
+      logo: <SiAdobeillustrator size={60} color="#FF9A00" />,
+    },
+    {
+      name: "Adobe InDesign",
+      logo: <SiAdobeindesign size={60} color="#FF3366" />,
+    },
   ];
   const languages = [
     { name: "English", native: "English" },
@@ -821,53 +912,31 @@ const About = () => {
 
           {/* Software Proficiency */}
           <motion.div variants={fadeInUp}>
-            <h3
-              className="text-2xl sm:text-3xl font-semibold mb-8 text-center"
-              style={{ color: colors.text }}
-            >
-              Software Proficiency
+            <h3 className="text-2xl sm:text-3xl font-semibold mb-8 text-center text-white">
+              Softwares
             </h3>
-            <div className="grid sm:grid-cols-2 gap-8">
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 place-items-center">
               {softwareSkills.map((skill) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between mb-2">
-                    <span
-                      className="font-medium text-sm md:text-base"
-                      style={{ color: colors.text }}
-                    >
-                      {skill.name}
-                    </span>
-                    <span
-                      className="text-sm font-semibold"
-                      style={{ color: colors.accent1 }}
-                    >
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-800 rounded-full h-2.5 overflow-hidden">
-                    <motion.div
-                      className="h-full rounded-full"
-                      style={{
-                        background: `linear-gradient(90deg, ${colors.accent2}, ${colors.accent1})`,
-                      }}
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, ease: "easeOut" }}
-                    />
-                  </div>
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center space-y-3"
+                >
+                  {skill.logo}
+                  <span className="font-medium text-sm md:text-base text-gray-200">
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>
           </motion.div>
-
           {/* Languages */}
           <motion.div variants={fadeInUp}>
             <h3
               className="text-2xl sm:text-3xl font-semibold mb-8 text-center"
               style={{ color: colors.text }}
             >
-              Languages
+              Typing
             </h3>
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               {languages.map((lang) => (
@@ -1156,13 +1225,6 @@ const Portfolio = () => {
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4 mb-3 text-white">
                     {selectedProject.title}
                   </h3>
-                  <p
-                    className="text-base sm:text-lg leading-relaxed"
-                    style={{ color: colors.muted }}
-                  >
-                    {selectedProject.description ||
-                      "A beautiful design project showcasing creative excellence and attention to detail."}
-                  </p>
                 </div>
                 <button
                   onClick={() => setSelectedProject(null)}
