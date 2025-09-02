@@ -47,7 +47,6 @@ import logoImage from "/src/assets/images/logo-3.png";
 
 // Project Image Imports
 import branding from "/src/assets/images/portfolio/branding-tech-4.jpg";
-import logo1 from "/src/assets/images/portfolio/logo-bakery.jpg";
 import packageImg from "/src/assets/images/portfolio/packaging-2.jpg";
 import packageImg2 from "/src/assets/images/portfolio/packaging-3.jpg";
 import poster from "/src/assets/images/portfolio/poster-music.jpg";
@@ -72,7 +71,7 @@ import poster6 from "/src/assets/images/portfolio/poster-design-4.jpg";
 import poster7 from "/src/assets/images/portfolio/poster-design-5.jpg";
 import poster8 from "/src/assets/images/portfolio/poster-design-6.jpg";
 import productManipulation from "/src/assets/images/portfolio/product-manipulation.jpg";
-import logo2 from "/src/assets/images/portfolio/logo-design.jpg";
+import logo2 from "/src/assets/images/portfolio/logo-design-4.jpg";
 import logo3 from "/src/assets/images/portfolio/logo-design-2.jpg";
 import logo4 from "/src/assets/images/portfolio/logo-design-5.jpg";
 import vectorDrawing2 from "/src/assets/images/portfolio/vector-drawing-2.jpg";
@@ -85,7 +84,7 @@ import rollup2 from "/src/assets/images/portfolio/roll-up-2.jpg";
 import magazineCoverPage from "/src/assets/images/portfolio/cover-page.jpg";
 import lanyard from "/src/assets/images/portfolio/lanyard.jpg";
 import magazineCoverPage2 from "/src/assets/images/portfolio/cover-page-2.jpg";
-import coreldraw from "/src/assets/images/coreldraw.png"
+
 
 // ============================================================================
 // DATA & CONFIGURATION
@@ -100,13 +99,7 @@ const portfolioData = [
     image: branding,
     className: "lg:col-span-2", // Keep as a strong opener
   },
-  {
-    id: 2,
-    title: "Burger Restaurant Logo Design",
-    category: "Logo Design",
-    image: logo1,
-    className: "",
-  },
+
   {
     id: 3,
     title: "Potato chips Packaging",
@@ -246,7 +239,7 @@ const portfolioData = [
     title: "Airy Jewels Logo & Branding",
     category: "Logo Design",
     image: logo2,
-    className: "",
+    className: "lg:col-span-2",
   },
   {
     id: 24,
