@@ -344,7 +344,7 @@ const portfolioData = [
   {
     id: 38,
     title: "Tropicana Product Manipulation",
-    category: "Photo Manipulation",
+    category: "Product Manipulation",
     image: photoManipulation2,
     className: "lg:col-span-2",
   },
