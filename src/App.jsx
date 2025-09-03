@@ -84,7 +84,9 @@ import rollup2 from "/src/assets/images/portfolio/roll-up-2.jpg";
 import magazineCoverPage from "/src/assets/images/portfolio/cover-page.jpg";
 import lanyard from "/src/assets/images/portfolio/lanyard.jpg";
 import magazineCoverPage2 from "/src/assets/images/portfolio/cover-page-2.jpg";
-
+import digitalArt3 from "/src/assets/images/portfolio/digitalArt3.jpg";
+import letterStyle2 from "/src/assets/images/portfolio/letter-style-2.jpg";
+import photoManipulation2 from "/src/assets/images/portfolio/photo-manipulation-2.jpg";
 
 // ============================================================================
 // DATA & CONFIGURATION
@@ -243,7 +245,7 @@ const portfolioData = [
   },
   {
     id: 24,
-    title: "Luxury Perfume Photo Manipulation",
+    title: "Luxury Perfume Product Manipulation",
     category: "Product Manipulation",
     image: productManipulation,
     className: "lg:col-span-2", // Keep as a hero item
@@ -286,14 +288,14 @@ const portfolioData = [
   {
     id: 30,
     title: "Digital Artwork",
-    category: "Digital Art",
+    category: "Digital Illustration",
     image: digitalArt,
     className: "",
   },
   {
     id: 31,
     title: "Digital Artwork 2",
-    category: "Digital Art",
+    category: "Digital Illustration",
     image: digitalArt2,
     className: "lg:col-span-2",
   },
@@ -337,6 +339,27 @@ const portfolioData = [
     title: "Magazine Cover Page 2",
     category: "Magazine Design",
     image: magazineCoverPage2,
+    className: "",
+  },
+  {
+    id: 38,
+    title: "Tropicana Product Manipulation",
+    category: "Photo Manipulation",
+    image: photoManipulation2,
+    className: "lg:col-span-2",
+  },
+  {
+    id: 39,
+    title: "Melto Mania Custom Lettering",
+    category: "Letter Style Creation",
+    image: letterStyle2,
+    className: "",
+  },
+  {
+    id: 40,
+    title: "Digital Illustration of Lemon ",
+    category: "Digital Illustration",
+    image: digitalArt3,
     className: "",
   },
 ];
