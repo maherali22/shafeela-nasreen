@@ -1387,7 +1387,7 @@ const Contact = () => {
                 {[
                   {
                     icon: <Instagram size={20} />,
-                    href: "https://www.instagram.com/shafeela.nsrn?igsh=MWwzdTBvYnF6aG9mOQ==",
+                    href: "https://www.instagram.com/sav_designs_official?igsh=bGhxNzVuNDNrMTk5",
                     label: "Instagram",
                   },
                   {
@@ -1523,7 +1523,7 @@ const Footer = () => (
         {[
           {
             icon: <Instagram size={24} />,
-            href: "https://www.instagram.com/shafeela.nsrn?igsh=MWwzdTBvYnF6aG9mOQ==",
+            href: "https://www.instagram.com/sav_designs_official?igsh=bGhxNzVuNDNrMTk5",
             label: "Instagram",
           },
           { icon: <Linkedin size={24} />, href: "#", label: "LinkedIn" },
