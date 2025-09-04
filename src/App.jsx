@@ -548,11 +548,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 40);
       const sections = navLinks.map((link) =>
         document.getElementById(link.toLowerCase())
       );
-      const scrollPosition = window.scrollY + 150;
+      const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
         if (
@@ -570,12 +570,10 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navLinks]);
 
   const scrollToSection = (id) => {
-    document
-      .getElementById(id.toLowerCase())
-      ?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleMobileLinkClick = (id) => {
@@ -584,119 +582,153 @@ const Navbar = () => {
   };
 
   const mobileMenuVariants = {
-    open: { transition: { staggerChildren: 0.07, delayChildren: 0.2 } },
-    closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+    open: {
+      transition: { staggerChildren: 0.08, delayChildren: 0.15 },
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
   };
 
   const mobileLinkVariants = {
-    open: {
-      y: 0,
-      opacity: 1,
-      transition: { y: { stiffness: 1000, velocity: -100 } },
-    },
-    closed: { y: 50, opacity: 0, transition: { y: { stiffness: 1000 } } },
+    open: { opacity: 1, y: 0, transition: { stiffness: 300, damping: 25 } },
+    closed: { opacity: 0, y: 30 },
   };
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        scrolled ? "bg-black/80 backdrop-blur-lg" : "bg-black/50"
-      } border-b border-gray-800/50`}
-    >
-      <div className="container mx-auto px-6 lg:px-8 flex justify-between items-center py-2">
-        <motion.div
-          onClick={() => scrollToSection("Home")}
-          className="flex items-center gap-2 cursor-pointer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <img src={logoImage} alt="SV Logo" className="h-14 w-auto" />
-          <span className="text-2xl sm:text-3xl font-bold text-teal-400">
-            Shafeela
-          </span>
-        </motion.div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-2">
-          {navLinks.map((link) => (
-            <motion.button
-              key={link}
-              onClick={() => scrollToSection(link)}
-              className="px-4 py-2 text-sm font-medium relative"
-              animate={{
-                color: activeSection === link ? colors.text : colors.muted,
-              }}
-              whileHover={{ color: colors.text }}
-            >
-              {activeSection === link && (
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-teal-400/10"
-                  layoutId="activePill"
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10">{link}</span>
-            </motion.button>
-          ))}
-        </div>
-
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-white"
-            aria-label="Toggle menu"
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={isOpen ? "x" : "menu"}
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </motion.div>
-            </AnimatePresence>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
+    <nav className="fixed top-0 w-full z-50 pointer-events-none">
+      {/* --- Main Glass Navbar --- */}
+      <motion.div
+        className={`pointer-events-auto mx-4 mt-4 rounded-3xl backdrop-blur-2xl border transition-all duration-500 ease-out ${
+          scrolled
+            ? "bg-black/40 border-white/10 shadow-xl shadow-black/20"
+            : "bg-white/5 border-white/5 shadow-lg shadow-black/10"
+        }`}
+        animate={{
+          y: scrolled ? 0 : 6,
+          scale: scrolled ? 1 : 0.99,
+        }}
+        transition={{ type: "tween", duration: 0.35 }}
+      >
+        <div className="container mx-auto px-6 lg:px-8 flex justify-between items-center py-4">
+          {/* --- Logo --- */}
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden border-t border-gray-800/50 bg-black/50 backdrop-blur-lg"
+            onClick={() => scrollToSection("Home")}
+            className="flex items-center gap-2 cursor-pointer"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
           >
-            <motion.div
-              className="flex flex-col items-center pt-2 pb-4 space-y-1"
-              variants={mobileMenuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              {navLinks.map((link) => (
-                <motion.button
-                  key={link}
-                  onClick={() => handleMobileLinkClick(link)}
-                  className="w-full text-center py-3 text-lg"
-                  style={{
-                    color:
-                      activeSection === link ? colors.accent1 : colors.text,
-                  }}
-                  variants={mobileLinkVariants}
-                >
-                  {link}
-                </motion.button>
-              ))}
-            </motion.div>
+            <img src={logoImage} alt="SV Logo" className="h-12 w-auto" />
+            <span className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-teal-300 to-blue-400 text-transparent bg-clip-text">
+              Shafeela
+            </span>
           </motion.div>
-        )}
-      </AnimatePresence>
+
+          {/* --- Desktop Nav --- */}
+          <div className="hidden md:flex items-center space-x-2">
+            {navLinks.map((link) => (
+              <motion.button
+                key={link}
+                onClick={() => scrollToSection(link)}
+                className={`px-6 py-3 text-sm font-medium relative rounded-2xl transition-colors duration-300 group ${
+                  activeSection === link
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                }`}
+                whileHover={{ y: -2, scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {/* --- Active Link Indicator --- */}
+                {activeSection === link && (
+                  <motion.span
+                    layoutId="activeGlow"
+                    className="absolute inset-0 rounded-2xl bg-white/10"
+                    style={{
+                      boxShadow: "0 0 15px rgba(255, 255, 255, 0.08)",
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 30,
+                    }}
+                  />
+                )}
+                <span className="relative z-10">{link}</span>
+              </motion.button>
+            ))}
+          </div>
+
+          {/* --- Mobile Menu Button --- */}
+          <div className="md:hidden">
+            <motion.button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-3 bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl text-white flex items-center justify-center"
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 16 }}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+            >
+              <div className="w-6 h-6 flex items-center justify-center relative">
+                <AnimatePresence mode="popLayout" initial={false}>
+                  <motion.div
+                    key={isOpen ? "close" : "menu"}
+                    initial={{ rotate: 180, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -180, opacity: 0 }}
+                    transition={{ duration: 0.32, ease: [0.3, 0.7, 0.3, 1] }}
+                    className="absolute inset-0 flex items-center justify-center"
+                  >
+                    {isOpen ? (
+                      <X size={20} strokeWidth={2.5} />
+                    ) : (
+                      <Menu size={20} strokeWidth={2.5} />
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </motion.button>
+          </div>
+        </div>
+
+        {/* --- Mobile Menu --- */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+              className="md:hidden border-t border-white/10 bg-black/30"
+            >
+              <motion.div
+                className="flex flex-col px-4 py-6 space-y-3"
+                variants={mobileMenuVariants}
+                initial="closed"
+                animate="open"
+                exit="closed"
+              >
+                {navLinks.map((link) => (
+                  <motion.button
+                    key={link}
+                    onClick={() => handleMobileLinkClick(link)}
+                    className={`py-4 px-6 rounded-2xl text-lg font-medium text-center transition-all duration-300 ${
+                      activeSection === link
+                        ? "text-white bg-white/15 border border-white/20 shadow-lg"
+                        : "text-gray-300 hover:bg-white/10 hover:text-white"
+                    }`}
+                    variants={mobileLinkVariants}
+                    whileHover={{ x: 6, scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    {link}
+                  </motion.button>
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
     </nav>
   );
 };
