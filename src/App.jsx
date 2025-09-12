@@ -412,7 +412,7 @@ const educationData = [
     type: "Diploma",
     icon: <Briefcase size={20} />,
     year: "2024 - 2025",
-    title: "Diploma in Creative Ads",
+    title: "Diploma in Graphic Designing",
     school: "Kiasco Design Academy",
   },
   {
